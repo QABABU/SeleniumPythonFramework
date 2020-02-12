@@ -1,4 +1,4 @@
-from configuration.logger import ConsoleLogger
+from config.logger import ConsoleLogger
 from page_actions.webdriver_actions import WebDriverActions
 from page_locators.signon_page_locators import SignOnPageLocators
 
