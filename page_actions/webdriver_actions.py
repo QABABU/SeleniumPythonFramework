@@ -9,6 +9,22 @@ class WebDriverActions:
     log = ConsoleLogger.get_logger("WebDriverActions")
 
     @classmethod
+    def get_title(cls, driver):
+        try:
+            return driver.title
+        except Exception as e:
+            cls.log.error("returning title failed due to - " + str(e))
+            exit(-1)
+
+    @classmethod
+    def get_current_url(cls, driver):
+        try:
+            return driver.current_url
+        except Exception as e:
+            cls.log.error("returning current url is failed due to - " + str(e))
+            exit(-1)
+
+    @classmethod
     def click_element(cls, driver, locator):
         try:
             driver.find_element(*locator).click()
