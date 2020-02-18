@@ -1,12 +1,11 @@
-from selenium import webdriver
 from selenium.webdriver.common.keys import Keys
-from webdriver_manager.chrome import ChromeDriverManager
 
 from config.logger import ConsoleLogger
 
 
 class WebDriverActions:
     """ This method contains webdriver common actions """
+
     log = ConsoleLogger.get_logger("WebDriverActions")
 
     @classmethod
