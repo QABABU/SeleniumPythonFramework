@@ -1,5 +1,10 @@
+from config.logger import ConsoleLogger
+
+
 class RegistrationPageActions:
 
-    @staticmethod
-    def reg_page(driver):
-        print(driver.title)
+    log = ConsoleLogger.get_logger("RegistrationPageActions")
+
+    @classmethod
+    def reg_page(cls):
+        cls.log.info("on reg page")
